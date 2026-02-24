@@ -35,6 +35,8 @@ function collectState() {
 function render(action) {
     let state = collectState(); // состояние полей из таблицы
     let result = [...data]; // копируем для последующего изменения
+    result = applySearching(result, state, action);
+    result = applyFiltering(result, state, action);
     result = applySorting(result, state, action);
     // @todo: использование
     result = applyPagination(result, state, action); 
@@ -45,13 +47,17 @@ function render(action) {
 const sampleTable = initTable({
     tableTemplate: 'table',
     rowTemplate: 'row',
-    before: ['header', 'filter'],
+    before: ['search', 'header', 'filter'],
     after: ['pagination']
 }, render);
 
 // @todo: инициализация
 
-import {initFiltering} from "./components.filtering.js"
+import { initSearching } from './components/searching.js';
+
+const applySearching = initSearching('search');
+
+import {initFiltering} from "./components/filtering.js"
 
 const applyFiltering = initFiltering(sampleTable.filter.elements, {    // передаём элементы фильтра
     searchBySeller: indexes.sellers                                    // для элемента с именем searchBySeller устанавливаем массив продавцов
