@@ -45,6 +45,7 @@ export function initTable(settings, onAction) {
                     row.elements[key].textContent = item[key];
                 }
             });
+            console.log(row.container)
 
             return row.container;
         });
