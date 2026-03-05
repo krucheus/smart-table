@@ -39,7 +39,8 @@ function collectState() {
         rowsPerPage,
         page,
         totalFrom,
-        totalTo
+        totalTo,
+        total
     };
 }
 
