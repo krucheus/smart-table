@@ -58,6 +58,7 @@ async function render(action) {
     // result = applyPagination(result, state, action);
     query = applyPagination(query, state, action);
     query = applyFiltering(query, state, action);
+    query = applySearching(query, state, action);
 
     const {total, items} = await api.getRecords(query);
 
