@@ -59,6 +59,7 @@ async function render(action) {
     query = applyPagination(query, state, action);
     query = applyFiltering(query, state, action);
     query = applySearching(query, state, action);
+    query = applySorting(query, state, action)
 
     const {total, items} = await api.getRecords(query);
 
@@ -77,7 +78,6 @@ const sampleTable = initTable({
 const applySearching = initSearching('search');
 
 const {applyFiltering, updateIndexes} = initFiltering(sampleTable.filter.elements);
-
 
 const applySorting = initSorting([
     sampleTable.header.elements.sortByDate,
