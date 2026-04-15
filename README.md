@@ -8,10 +8,15 @@
 
 Создайте папку и перейдите в неё:
 
-> cd <name-folder>
+```shell
+cd <name-folder>
+```
+
 Клонируйте репозиторий:
 
-> git clone [https://github.com/krucheus/zakrivayuschiy-teg-f.git](https://github.com/krucheus/smart-table.git)
+```shell
+git clone [https://github.com/intredd/zakrivayuschiy-teg-f.git](https://github.com/krucheus/smart-table.git)
+```
 
 
 
