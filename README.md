@@ -15,7 +15,7 @@ cd <name-folder>
 Клонируйте репозиторий:
 
 ```shell
-git clone [https://github.com/intredd/zakrivayuschiy-teg-f.git](https://github.com/krucheus/smart-table.git)
+git clone https://github.com/krucheus/smart-table.git
 ```
 
 
